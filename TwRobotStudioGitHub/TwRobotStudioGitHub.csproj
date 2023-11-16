@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\LibGit2Sharp.NativeBinaries.2.0.320\build\net46\LibGit2Sharp.NativeBinaries.props" Condition="Exists('..\packages\LibGit2Sharp.NativeBinaries.2.0.320\build\net46\LibGit2Sharp.NativeBinaries.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26C08F38-877E-49F6-A950-70C61D2543AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwRobotStudioGitHub</RootNamespace>
+    <AssemblyName>TwRobotStudioGitHub</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramFiles)\ABB\RobotStudio 2022\Bin\RobotStudio.exe</StartProgram>
+    <StartArguments>/addin:"C:\Users\tomi\source\repos\TwRobotStudioGitHub\TwRobotStudioGitHub\bin\Debug\TwRobotStudioGitHub.rsaddin"</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramFiles)\ABB\RobotStudio 2022\Bin\RobotStudio.exe</StartProgram>
+    <StartArguments>/addin:"C:\Users\tomi\source\repos\TwRobotStudioGitHub\TwRobotStudioGitHub\bin\Release\TwRobotStudioGitHub.rsaddin"</StartArguments>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ABB.Robotics.Math">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ABB\SDK\RobotStudio 2023 SDK\ABB.Robotics.Math.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ABB\SDK\RobotStudio 2023 SDK\ABB.Robotics.RobotStudio.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Controllers">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ABB\SDK\RobotStudio 2023 SDK\ABB.Robotics.RobotStudio.Controllers.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.Environment">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ABB\SDK\RobotStudio 2023 SDK\ABB.Robotics.RobotStudio.Environment.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ABB.Robotics.RobotStudio.UI">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ABB\SDK\RobotStudio 2023 SDK\ABB.Robotics.RobotStudio.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ABB.Robotics.Controllers.PC">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ABB\SDK\PCSDK 2023\ABB.Robotics.Controllers.PC.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DiffPlex, Version=1.7.1.0, Culture=neutral, PublicKeyToken=1d35e91d1bd7bc0f, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiffPlex.1.7.1\lib\net40\DiffPlex.dll</HintPath>
+    </Reference>
+    <Reference Include="DiffPlex.Wpf, Version=1.4.0.0, Culture=neutral, PublicKeyToken=1d35e91d1bd7bc0f, processorArchitecture=MSIL">
+      <HintPath>..\packages\DiffPlex.Wpf.1.4.0\lib\net48\DiffPlex.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="LibGit2Sharp, Version=0.27.0.0, Culture=neutral, PublicKeyToken=7cbde695407f0333, processorArchitecture=MSIL">
+      <HintPath>..\packages\LibGit2Sharp.0.27.2\lib\net472\LibGit2Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Octokit, Version=7.1.0.0, Culture=neutral, PublicKeyToken=0be8860aee462442, processorArchitecture=MSIL">
+      <HintPath>..\packages\Octokit.7.1.0\lib\netstandard2.0\Octokit.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddinControllerObject.cs" />
+    <Compile Include="AddinDatas.cs" />
+    <Compile Include="AddinRsUi.cs" />
+    <Compile Include="AddinMain.cs" />
+    <Compile Include="CompareFiles.xaml.cs">
+      <DependentUpon>CompareFiles.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="TwRobotStudioGitHub.rsaddin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DiffPlex.ico" />
+    <Content Include="License.txt" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\setting.png" />
+    <None Include="Resources\token.png" />
+    <None Include="Resources\username.png" />
+    <None Include="Resources\compare_files_32.png" />
+    <None Include="Resources\github_32.png" />
+    <None Include="Resources\code_branch_32.png" />
+    <None Include="Resources\commit_32.png" />
+    <None Include="Resources\compare_32.png" />
+    <None Include="Resources\key_32.png" />
+    <None Include="Resources\git-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="CompareFiles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\LibGit2Sharp.NativeBinaries.2.0.320\build\net46\LibGit2Sharp.NativeBinaries.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\LibGit2Sharp.NativeBinaries.2.0.320\build\net46\LibGit2Sharp.NativeBinaries.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

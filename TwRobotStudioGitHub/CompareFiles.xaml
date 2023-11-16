@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="TwRobotStudioGitHub.CompareFiles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TwRobotStudioGitHub"
+             mc:Ignorable="d" 
+             xmlns:diffplex="clr-namespace:DiffPlex.Wpf.Controls;assembly=DiffPlex.Wpf"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <!-- Commits -->
+        <Label Content="Commit"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Grid.Row="0"
+               Grid.Column="0"
+               />
+        <ComboBox Name="cbCommits"
+                  DisplayMemberPath="Commit.Message"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Grid.Row="0"
+                  Grid.Column="1"
+                  Width="150"
+                  FontSize="8"
+                  />
+        <!-- Tasks -->
+        <Label Content="Task"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Grid.Row="0"
+               Grid.Column="2"
+               />
+        <ComboBox Name="cbTasks"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Grid.Row="0"
+                  Grid.Column="3"
+                  Width="150"
+                  DisplayMemberPath="Name"
+                  FontSize="8"
+                  />
+        <!-- Modules -->
+        <Label Content="Module"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               Grid.Row="0"
+               Grid.Column="4"
+               />
+        <ComboBox Name="cbModules"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  Grid.Row="0"
+                  Grid.Column="5"
+                  Width="150"
+                  DisplayMemberPath="Name"
+                  FontSize="8"
+                  />
+        <!-- Diff viewer -->
+        <diffplex:DiffViewer x:Name="DiffView"
+                             OldTextHeader="Selected commit"
+                             NewTextHeader="Controller"
+                             Grid.Row="1"
+                             Grid.ColumnSpan="99"/>
+    </Grid>
+</UserControl>
